@@ -1,0 +1,20 @@
+<% include ../partials/header %>
+<h1>this is show template</h1>
+
+<h3><%= campground.name %></h3>
+<img src="<%= campground.image %>" alt="nice view">
+<p>Description: <%- campground.description %></p>
+<p>Comments: </p>
+<% campground.comments.forEach(function(comment){ %>
+    <p>
+        <strong><%= comment.author %></strong> : <%= comment.text %>
+    </p>
+<% }) %>
+<p><a href="<%= campground._id %>/comments/new">Add comment</a></p>
+<hr>
+<p><a href="<%= campground._id %>/edit">Edit</a></p>
+<form action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
+    <button>Delete</button>
+</form>
+<a href="/campgrounds">Go back</a>
+<% include ../partials/footer %>
