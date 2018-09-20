@@ -7,9 +7,10 @@
         <p><%= campground.name %></p>
         <img src="<%= campground.image %>" alt="nice view">
         <p class="description">
-            <%- campground.description.substring(0,100) %>...
+            <%= campground.description.substring(0,100) %>...
         </p>
         <p><%= campground.created.toDateString() %></p>
+        <p><em>Submited by: <%= campground.author.username %></em></p>
         <p>
             <a href="/campgrounds/<%= campground._id %>">Read More</a>
         </p>

@@ -7,7 +7,8 @@
 <p>Comments: </p>
 <% campground.comments.forEach(function(comment){ %>
     <p>
-        <strong><%= comment.author %></strong> : <%= comment.text %>
+        <strong><%= comment.author.username %></strong> : <%= comment.text %> 
+        | created at: <%= comment.created.toDateString() %>
     </p>
 <% }) %>
 <p><a href="<%= campground._id %>/comments/new">Add comment</a></p>
