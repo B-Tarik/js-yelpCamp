@@ -21,3 +21,9 @@
         <% } %>
     </ul>
 </nav>
+<% if(error && error.length > 0) { %>
+    <h2><%= error %></h2>
+<% } %>
+<% if(success && success.length > 0) { %>
+    <h2><%= success %></h2>
+<% } %>

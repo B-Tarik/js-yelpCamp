@@ -40,6 +40,7 @@ router.post('/', middleware.isLoggedIn, function(req, res) {
             if (err) {
                 console.log(err);
             } else {
+                req.flash('success', 'Successfully Added Campground');
                 res.redirect('campgrounds');
             }
         });
@@ -78,6 +79,7 @@ router.put('/:id', middleware.checkCampgroundOwnership, function(req, res) {
         if (err) {
             console.log(err);
         } else {
+            req.flash('success', 'Successfully Edited Campground');
             res.redirect('/campgrounds/' + req.params.id);
         }
     });
@@ -89,6 +91,7 @@ router.delete('/:id', middleware.checkCampgroundOwnership, function(req, res) {
             if (err) {
                 console.log(err);
             } else {
+                req.flash('success', 'Successfully Deleted Campground');
                 res.redirect('/campgrounds');
             }
         });
