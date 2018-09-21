@@ -1,4 +1,4 @@
-var express             = require('express'),
+const express           = require('express'),
     expressSession      = require('express-session'),
     bodyParser          = require('body-parser'),
     mongoose            = require('mongoose'),
@@ -6,8 +6,9 @@ var express             = require('express'),
     passport            = require('passport'),
     localStrategy       = require('passport-local'),
 
+    Campground          = require('./models/campground'),
     User                = require('./models/user'),
-    // seedDB              = require('./seeds'),
+    seedDB              = require('./seeds'),
 
     // requiring routes
     indexRoutes         = require('./routes/index'),
@@ -18,6 +19,7 @@ var express             = require('express'),
 
 // APP CONFIG
 mongoose.connect('mongodb://localhost/yelp_camp', { useNewUrlParser: true });
+mongoose.set('useFindAndModify', false);
 var app = express();
 app.set('view engine', 'ejs');
 app.use(express.static( __dirname + '/public'));
