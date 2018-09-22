@@ -11,7 +11,7 @@ const express           = require('express'),
     // seedDB              = require('./seeds'),
 
     // requiring routes
-    indexRoutes         = require('./routes/index'),
+    indexRoutes         = require('./routes'),
     campgroundRoutes    = require('./routes/campground'),
     commentRoutes       = require('./routes/comment');
 
