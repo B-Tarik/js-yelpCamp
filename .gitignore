@@ -9,8 +9,9 @@
 *.vi
 *~
 *.sass-cache
-node_modules/
-.tmp/
+/node_modules
+npm-debug.log
+/*.env
 
 # OS or Editor folders
 .DS_Store
