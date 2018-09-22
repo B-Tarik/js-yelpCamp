@@ -18,7 +18,9 @@ const express           = require('express'),
     
 
 // APP CONFIG
-mongoose.connect('mongodb://localhost/yelp_camp', { useNewUrlParser: true });
+// mongoose.connect('mongodb://localhost/yelp_camp', { useNewUrlParser: true });
+mongoose.connect('mongodb://tarik:password2018@ds219130.mlab.com:19130/yelpcamp', { useNewUrlParser: true });
+
 mongoose.set('useFindAndModify', false);
 var app = express();
 app.set('view engine', 'ejs');
