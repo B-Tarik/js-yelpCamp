@@ -19,8 +19,8 @@ it's a camping website with:
 
 ### What Technologies Used
 
-**Back-end:** nodeJs, express
+**Back-end:** nodeJs, express, mongoose
 
-**Database:** mongoDB, mongoose
+**Database:** mongoDB
 
 **Authentication:** passport
