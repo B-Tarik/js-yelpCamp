@@ -19,7 +19,7 @@ it's a camping website with:
 
 ### What Technologies Used
 
-**Back-end:** express
+**Back-end:** nodeJs, express
 
 **Database:** mongoDB
 
