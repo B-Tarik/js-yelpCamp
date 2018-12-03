@@ -21,6 +21,6 @@ it's a camping website with:
 
 **Back-end:** nodeJs, express
 
-**Database:** mongoDB
+**Database:** mongoDB, mongoose
 
 **Authentication:** passport
