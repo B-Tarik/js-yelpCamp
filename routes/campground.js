@@ -1,7 +1,7 @@
 const express       = require('express'),
     sanitizeHtml    = require('sanitize-html'),
     Campground      = require('../models/campground'),
-    mongoose            = require('mongoose'),
+    mongoose        = require('mongoose'),
     middleware      = require('../middleware');
 
 
